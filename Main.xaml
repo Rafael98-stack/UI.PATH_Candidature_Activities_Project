@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794,3432" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,3976.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -47,6 +47,7 @@
       <x:String>UiPath.Activities.System.Text</x:String>
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Security</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -117,9 +118,10 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="825,3367" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="824.8,3912" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
       <Variable x:TypeArguments="x:String" Name="Candidate_Role" />
@@ -133,13 +135,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: (11) Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="763,3279" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: (11) Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="762.4,3823.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="729,3039" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="728.8,3583.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
             </Sequence.Variables>
@@ -148,7 +150,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BuildDataTable DataTable="[dt_CandidateData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="667,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Surname&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Role&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Mobile_Phone&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Name /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+            <ui:BuildDataTable DataTable="[dt_CandidateData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="666.4,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Surname&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Role&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Mobile_Phone&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Name /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -156,13 +158,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:BuildDataTable>
-            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentElement'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="667,2447" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
+            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentElement'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="666.4,3264" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
               <uix:NForEachUiElement.Body>
                 <ActivityAction x:TypeArguments="x:Int32">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="603,2150" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="603.2,2964.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Details_Text" />
                     </Sequence.Variables>
@@ -171,7 +173,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="541,205" sap2010:WorkflowViewState.IdRef="NClick_4" InUiElement="[CurrentElement]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="540.8,205.6" sap2010:WorkflowViewState.IdRef="NClick_4" InUiElement="[CurrentElement]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
                       <uix:NClick.VerifyOptions>
                         <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
                           <uix:VerifyExecutionOptions.Retry>
@@ -183,7 +185,7 @@
                         </uix:VerifyExecutionOptions>
                       </uix:NClick.VerifyOptions>
                     </uix:NClick>
-                    <uix:NGetText DelayBefore="0.5" DisplayName="Get Text 'NUOVA ASSUNZIONE'" sap:VirtualizedContainerService.HintSize="541,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" TextString="[Details_Text]" Version="V3">
+                    <uix:NGetText DelayBefore="0.5" DisplayName="Get Text 'NUOVA ASSUNZIONE'" sap:VirtualizedContainerService.HintSize="540.8,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" TextString="[Details_Text]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" DesignTimeRectangle="1109, 494, 801, 322" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='xam_msg_class' parentid='dijit_layout_ContentPane_15' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='xam_msg_class' parentid='dijit_layout_ContentPane_15' tag='DIV' type='' aaname='  ' /&gt;" Guid="2fbb9ae5-95f7-43e9-bc48-9f06a001a92f" ImageBase64="" InformativeScreenshot="9f349a33ddf740da234c313128a16e68.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIDpk2aNGTMmVMmBALYsAjAhRo6XOjhocMXAR54eNHhQyACFjxA8IM@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;0018E1CFAD623FCFF7908C8F2CD11561&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=0018E1CFAD623FCFF7908C8F2CD11561&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;28b9bb7942669654b1ba241fb32740a5ad308f1e707e2035ab334*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -194,13 +196,70 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <Sequence DisplayName="Sequence Reading Candidate Details" sap:VirtualizedContainerService.HintSize="541,1343" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence DisplayName="Sequence Mail Sender Confirmation cadidate" sap:VirtualizedContainerService.HintSize="540.8,816.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Sender" />
+                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Sequence Get Candidate Name" sap:VirtualizedContainerService.HintSize="478.4,728" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Scrivi'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" CVScreenId="a865f393-ca73-46e7-b3b4-038de1bc7130" CvElementArea="14, 264, 215, 58" CvTextArea="113, 283, 60, 18" CvTextArgument="SCRIVI" CvType="Button" DesignTimeRectangle="74, 271, 141, 45" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Scrivi' parentid='dijit_form_Button_10' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Scrivi' parentid='dijit_form_Button_10' tag='SPAN' type='' class='dijitReset dijitInline dijitButtonText' check:innerText='SCRIVI' /&gt;" Guid="3434c5f4-9a1d-4590-9724-f3105197574f" InformativeScreenshot="9cc5f9b044c348806e0084c9e8a240a0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzRk4YNmzAyYMmBAJy5aKVL0_QCUK0C5a9VLQt0oRLFopXvGnqpSk@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;3a925d974c31dc9a47e307c856a979ebe94c9f747bdac15828526*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="a865f393-ca73-46e7-b3b4-038de1bc7130" CvElementArea="14, 264, 215, 58" CvType="Button" DesignTimeRectangle="22, 271, 200, 45" ElementType="Button" FullSelectorArgument="&lt;webctrl id='dijit_form_Button_10' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dijit_form_Button_10' tag='SPAN' type='' class='dijitReset dijitStretch dijitButtonContents' aaname='' check:innerText='SCRIVI' /&gt;" Guid="fccc29e8-c081-4151-86f6-2fd25b0fce69" SearchSteps="FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NGetText DisplayName="Get Text 'email'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" TextString="[Sender]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" CVScreenId="98c1a878-741b-42e9-b3cd-7c01cdbc916f" CvTextArea="775, 455, 253, 21" CvType="AnyWordGroup" DesignTimeRectangle="778, 455, 445, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl class='address-tooltip-email-block' parentid='uiLogic_webmail_utils_AddressTooltipDialog_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='address-tooltip-email-block' parentid='uiLogic_webmail_utils_AddressTooltipDialog_0' tag='DIV' type='' /&gt;" Guid="8d9405a0-859e-4986-8746-a3c0a7f93d99" InformativeScreenshot="f5fd9af1a20c918bb977666b23607065.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzRk4YNmzAyYMmBAJy5aKVL0_QCUK0C5a9VLQt0oRLFopXvGnqpSk@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;3a925d974c31dc9a47e307c856a979ebe94c9f747bdac15828526*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target DesignTimeRectangle="689, 419, 579, 84" ElementType="Button" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='uiLogic_webmail_utils_AddressTooltipDialog_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='uiLogic_webmail_utils_AddressTooltipDialog_0' tag='DIV' class='section-1 has-bottom-border flex' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='I&amp;#xD;&amp;#xA;Iacopo De Palatis&amp;#xD;&amp;#xA;iacopo.depalatis@acpsystem.eu' /&gt;" Guid="3e850b6d-3668-45ca-9ad6-68b1e7ae6d2b" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,279.2" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Text="[Sender]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" DesignTimeRectangle="1086, 491, 732, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='AliasToVisible' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='AliasToVisible' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="7ccaabd7-0719-482d-9f07-7169c80b80db" InformativeScreenshot="3158481b62fe0e7965e3a8ddcee7688d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzRk4YNmzAyYMmBAJy5aKVL0_QCUK0C5a9VLQt0oRLFopXvGnqpSk@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;3a925d974c31dc9a47e307c856a979ebe94c9f747bdac15828526*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                    </Sequence>
+                    <Sequence DisplayName="Sequence Reading Candidate Details" sap:VirtualizedContainerService.HintSize="540.8,1338.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Sequence Get Candidate Name" sap:VirtualizedContainerService.HintSize="478.4,724.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -208,7 +267,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Details_Text]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="Nome" SeparatorKey="Custom" TextToRight="[Candidate_Name]" />
-                        <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[Candidate_Name]" sap:VirtualizedContainerService.HintSize="387.2,299.2" sap2010:WorkflowViewState.IdRef="TextToLeftRight_2" Separator="Cognome" SeparatorKey="Custom" TextToLeft="[Candidate_Name]" />
+                        <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[Candidate_Name]" sap:VirtualizedContainerService.HintSize="387.2,297.6" sap2010:WorkflowViewState.IdRef="TextToLeftRight_2" Separator="Cognome" SeparatorKey="Custom" TextToLeft="[Candidate_Name]" />
                       </Sequence>
                       <Sequence DisplayName="Sequence Get Candidate Surname" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <sap:WorkflowViewStateService.ViewState>
@@ -233,7 +292,7 @@
                         <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Details_Text]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_5" Separator="Ruolo" SeparatorKey="Custom" TextToRight="[Candidate_Role]" />
                         <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[Candidate_Role]" sap:VirtualizedContainerService.HintSize="387.2,299.2" sap2010:WorkflowViewState.IdRef="TextToLeftRight_9" Separator="Email" SeparatorKey="Custom" TextToLeft="[Candidate_Role]" />
                       </Sequence>
-                      <Sequence DisplayName="Sequence Get Candidate Email" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence DisplayName="Sequence Get Candidate Email" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
                         </Sequence.Variables>
@@ -246,7 +305,7 @@
                         <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Details_Text]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_6" Separator="Email" SeparatorKey="Custom" TextToRight="[Candidate_Email]" />
                         <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[Candidate_Email]" sap:VirtualizedContainerService.HintSize="387.2,299.2" sap2010:WorkflowViewState.IdRef="TextToLeftRight_7" Separator="Numero cellulare" SeparatorKey="Custom" TextToLeft="[Candidate_Email]" />
                       </Sequence>
-                      <Sequence DisplayName="Sequence Get Candidate MobilePhoneNumber" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Sequence Get Candidate MobilePhoneNumber" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
                         </Sequence.Variables>
@@ -258,7 +317,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Details_Text]" sap:VirtualizedContainerService.HintSize="387.2,299.2" sap2010:WorkflowViewState.IdRef="TextToLeftRight_8" Separator="Numero cellulare" SeparatorKey="Custom" TextToRight="[Candidate_Mobile_Phone]" />
                       </Sequence>
-                      <ui:MultipleAssign DisplayName="Multiple Assign Removing Space Braket From Strings" sap:VirtualizedContainerService.HintSize="479,265" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign DisplayName="Multiple Assign Removing Space Braket From Strings" sap:VirtualizedContainerService.HintSize="478.4,265.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -311,13 +370,13 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:MultipleAssign>
                     </Sequence>
-                    <Sequence DisplayName="Sequence Add Row in Dt_Table" sap:VirtualizedContainerService.HintSize="541,326" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence DisplayName="Sequence Add Row in Dt_Table" sap:VirtualizedContainerService.HintSize="540.8,326.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Candidate_Name, Candidate_Surname, Candidate_Role, Candidate_Email, Candidate_Mobile_Phone}]" DataTable="[dt_CandidateData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,211" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Candidate_Name, Candidate_Surname, Candidate_Role, Candidate_Email, Candidate_Mobile_Phone}]" DataTable="[dt_CandidateData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="387.2,212.8" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
                     </Sequence>
                   </Sequence>
                 </ActivityAction>
@@ -336,28 +395,12 @@
                 </scg:List>
               </uix:NForEachUiElement.VariablesMetadata>
             </uix:NForEachUiElement>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_CandidateData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="667,413" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-              <ui:ForEachRow.Body>
-                <ActivityAction x:TypeArguments="sd:DataRow">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_CandidateData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="354,139" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="Output\Candidates.xlsx" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEachRow.Body>
-            </ui:ForEachRow>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_CandidateData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="666.4,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="Output\Candidates.xlsx" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-9, -9, 1938, 1158" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAo5JREFUOE+V0L1PE3Ecx/FGNBpZNBET46SDDrI6uDno5q6LLPwDDiYajbOoA4GqkYciGEp5CLYEENBCUaAtlj7y0IejvfbKXbn2rr1er73rA/exSc8wQCS+tsv3+/5e8tOdhF/9foFf+/FU+/x/2W8vz4vrve0JSnoQ8CTuzc1sNmmjf/PqdKcPgGtyyv+8EBhMcLwi+zbI7IotdENbOV49urxLC62CUHgjLHT55H2PyoesYGgO9pWwZByyt2qrR1m7OpoFYnuonGPFGlAWrJ2QvJOgd4Pqln8PXu9erY4vlkoTWnLIE+TOhohkR04sQSGtqrjQBt5jQJqhoYgsKN88ct5RFKObYJLMMy075IukbwbJTGqP4SBJVZXZl8BSJKhoDHz9SJbNoKyUwPJ5sJwoaVmD05885Q+zr9K5Migqo/62h0HsxLDljSDgdMMzNQYul0eQoLDuCakhkoOWNjg88ZYQyReyYhkluaJyGQEBPwXH/CyioR2kyQj2Ulz970Wkc1U4fHFOSxtW3dHXMTpfH5bVfLEGuQrISg0VWYSiKChXVUjyAfh8GUm2hJlF94CWNiw5iXd+Ig0yVQTNyWo6X8HfQzVVRbWmolA6QFqoqKFEDj2D03e19JDBtHRr0RGxBnYzSoyRwDA8MnwBQv2QWKoiJ1XB8Ap+uYjsxjZ9TsuO+jy+/HDJFbd5R/RVwjaF/R13/dULKs3m1XhKwtyy/+PQuPWMtn68x0/0Fw2GiXbL8PiaffgDSJsZhM8F1zYNk+XnfW3tZC86J6/0dPe2jQ4ao067G7M2b/i94etVbXy8PpO5qW/E3GwwWlr6TZbrvcPm2/qBsUedn0xrb/Vfprv7jHf6jZZLjW2d7g8FBvq+3RadygAAAABJRU5ErkJggg==" InformativeScreenshot="98dcae4569bfd36b0e956911611cba65.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzRk4YNmzAyYMmBAJy5aKVL0_QCUK0C5a9VLQt0oRLFopXvGnqpSk@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;3a925d974c31dc9a47e307c856a979ebe94c9f747bdac15828526*' title='Messaggi - Aruba Webmail' /&gt;" Title="Messaggi - Aruba Webmail" Url="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" />
+        <uix:TargetApp Area="-9, -9, 1938, 1158" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAo5JREFUOE+V0L1PE3Ecx/FGNBpZNBET46SDDrI6uDno5q6LLPwDDiYajbOoA4GqkYciGEp5CLYEENBCUaAtlj7y0IejvfbKXbn2rr1er73rA/exSc8wQCS+tsv3+/5e8tOdhF/9foFf+/FU+/x/2W8vz4vrve0JSnoQ8CTuzc1sNmmjf/PqdKcPgGtyyv+8EBhMcLwi+zbI7IotdENbOV49urxLC62CUHgjLHT55H2PyoesYGgO9pWwZByyt2qrR1m7OpoFYnuonGPFGlAWrJ2QvJOgd4Pqln8PXu9erY4vlkoTWnLIE+TOhohkR04sQSGtqrjQBt5jQJqhoYgsKN88ct5RFKObYJLMMy075IukbwbJTGqP4SBJVZXZl8BSJKhoDHz9SJbNoKyUwPJ5sJwoaVmD05885Q+zr9K5Migqo/62h0HsxLDljSDgdMMzNQYul0eQoLDuCakhkoOWNjg88ZYQyReyYhkluaJyGQEBPwXH/CyioR2kyQj2Ulz970Wkc1U4fHFOSxtW3dHXMTpfH5bVfLEGuQrISg0VWYSiKChXVUjyAfh8GUm2hJlF94CWNiw5iXd+Ig0yVQTNyWo6X8HfQzVVRbWmolA6QFqoqKFEDj2D03e19JDBtHRr0RGxBnYzSoyRwDA8MnwBQv2QWKoiJ1XB8Ap+uYjsxjZ9TsuO+jy+/HDJFbd5R/RVwjaF/R13/dULKs3m1XhKwtyy/+PQuPWMtn68x0/0Fw2GiXbL8PiaffgDSJsZhM8F1zYNk+XnfW3tZC86J6/0dPe2jQ4ao067G7M2b/i94etVbXy8PpO5qW/E3GwwWlr6TZbrvcPm2/qBsUedn0xrb/Vfprv7jHf6jZZLjW2d7g8FBvq+3RadygAAAABJRU5ErkJggg==" InformativeScreenshot="9318ae7532b8e082d5dd9ba99915e823.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzRk4YNmzAyYMmBAJy5aKVL0_QCUK0C5a9VLQt0oRLFopXvGnqpSk@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;3a925d974c31dc9a47e307c856a979ebe94c9f747bdac15828526*' title='Messaggi - Aruba Webmail' /&gt;" Title="Messaggi - Aruba Webmail" Url="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
