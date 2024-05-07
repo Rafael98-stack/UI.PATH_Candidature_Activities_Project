@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,1367.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,1821.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -44,6 +44,7 @@
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -111,26 +112,26 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="637.6,1302.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="796,1756.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Name="Counter_Row_Email">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="24+1" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
+      <Variable x:TypeArguments="x:String" Name="Candidate_Role" />
+      <Variable x:TypeArguments="x:String" Name="Candidate_Name" />
+      <Variable x:TypeArguments="x:String" Name="Candidate_Email" />
+      <Variable x:TypeArguments="x:String" Name="Candidate_Mobile_Phone" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="575.2,1213.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="733.6,1668" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="541.6,973.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="700,1428" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
             </Sequence.Variables>
@@ -139,13 +140,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentElement'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="479.2,885.6" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
+            <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentElement'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="637.6,1340" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
               <uix:NForEachUiElement.Body>
                 <ActivityAction x:TypeArguments="x:Int32">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,593.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="574.4,1048" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Details_Text" />
                     </Sequence.Variables>
@@ -154,7 +155,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="353.6,205.6" sap2010:WorkflowViewState.IdRef="NClick_4" InUiElement="[CurrentElement]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="512,205.6" sap2010:WorkflowViewState.IdRef="NClick_4" InUiElement="[CurrentElement]" KeyModifiers="None" MouseButton="Left" Version="V3">
                       <uix:NClick.VerifyOptions>
                         <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
                           <uix:VerifyExecutionOptions.Retry>
@@ -166,7 +167,7 @@
                         </uix:VerifyExecutionOptions>
                       </uix:NClick.VerifyOptions>
                     </uix:NClick>
-                    <uix:NGetText DisplayName="Get Text 'NUOVA ASSUNZIONE'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" TextString="[Details_Text]" Version="V3">
+                    <uix:NGetText DelayBefore="0.5" DisplayName="Get Text 'NUOVA ASSUNZIONE'" sap:VirtualizedContainerService.HintSize="512,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" TextString="[Details_Text]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" DesignTimeRectangle="1109, 494, 801, 322" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='xam_msg_class' parentid='dijit_layout_ContentPane_15' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='xam_msg_class' parentid='dijit_layout_ContentPane_15' tag='DIV' type='' aaname='  ' /&gt;" Guid="2fbb9ae5-95f7-43e9-bc48-9f06a001a92f" ImageBase64="" InformativeScreenshot="9f349a33ddf740da234c313128a16e68.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIDpk2aNGTMmVMmBALYsAjAhRo6XOjhocMXAR54eNHhQyACFjxA8IM@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;0018E1CFAD623FCFF7908C8F2CD11561&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=0018E1CFAD623FCFF7908C8F2CD11561&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;28b9bb7942669654b1ba241fb32740a5ad308f1e707e2035ab334*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -177,7 +178,124 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[Details_Text]" />
+                    <Sequence DisplayName="Sequence Reading Candidate Details" sap:VirtualizedContainerService.HintSize="512,454.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Sequence Get Candidate Name" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Details_Text]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="Nome" SeparatorKey="Custom" TextToRight="[Candidate_Name]" />
+                        <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[Candidate_Name]" sap:VirtualizedContainerService.HintSize="387.2,299.2" sap2010:WorkflowViewState.IdRef="TextToLeftRight_2" Separator="Cognome" SeparatorKey="Custom" TextToLeft="[Candidate_Name]" />
+                      </Sequence>
+                      <Sequence DisplayName="Sequence Get Candidate Surname" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Details_Text]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_3" Separator="Cognome" SeparatorKey="Custom" TextToRight="[Candidate_Surname]" />
+                        <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[Candidate_Surname]" sap:VirtualizedContainerService.HintSize="387.2,299.2" sap2010:WorkflowViewState.IdRef="TextToLeftRight_4" Separator="Ruolo" SeparatorKey="Custom" TextToLeft="[Candidate_Surname]" />
+                      </Sequence>
+                      <Sequence DisplayName="Sequence Get Candidate Role" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Details_Text]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_5" Separator="Ruolo" SeparatorKey="Custom" TextToRight="[Candidate_Role]" />
+                        <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[Candidate_Role]" sap:VirtualizedContainerService.HintSize="387.2,299.2" sap2010:WorkflowViewState.IdRef="TextToLeftRight_9" Separator="Email" SeparatorKey="Custom" TextToLeft="[Candidate_Role]" />
+                      </Sequence>
+                      <Sequence DisplayName="Sequence Get Candidate Email" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Details_Text]" sap:VirtualizedContainerService.HintSize="387.2,306.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_6" Separator="Email" SeparatorKey="Custom" TextToRight="[Candidate_Email]" />
+                        <ui:TextToLeftRight TextToRight="{x:Null}" DisplayName="Text to Left/Right" FullText="[Candidate_Email]" sap:VirtualizedContainerService.HintSize="387.2,299.2" sap2010:WorkflowViewState.IdRef="TextToLeftRight_7" Separator="Numero cellulare" SeparatorKey="Custom" TextToLeft="[Candidate_Email]" />
+                      </Sequence>
+                      <Sequence DisplayName="Sequence Get Candidate MobilePhoneNumber" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[Details_Text]" sap:VirtualizedContainerService.HintSize="387.2,299.2" sap2010:WorkflowViewState.IdRef="TextToLeftRight_8" Separator="Numero cellulare" SeparatorKey="Custom" TextToRight="[Candidate_Mobile_Phone]" />
+                      </Sequence>
+                      <ui:MultipleAssign DisplayName="Multiple Assign Removing Space Braket From Strings" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                        <ui:MultipleAssign.AssignOperations>
+                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Candidate_Name]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[Candidate_Name.Trim]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Candidate_Surname]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[Candidate_Surname.Trim]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Candidate_Role]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[Candidate_Role.Trim]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Candidate_Email]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[Candidate_Email.Trim]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Candidate_Mobile_Phone]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[Candidate_Mobile_Phone.Trim]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                          </scg:List>
+                        </ui:MultipleAssign.AssignOperations>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:MultipleAssign>
+                    </Sequence>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="512,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[Candidate_Name + Candidate_Surname + Candidate_Email + Candidate_Role + Candidate_Mobile_Phone]" />
                   </Sequence>
                 </ActivityAction>
               </uix:NForEachUiElement.Body>
