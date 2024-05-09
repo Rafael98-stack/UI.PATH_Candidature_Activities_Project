@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2624.8,5902.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2624.8,5877.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -123,7 +123,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="2635.2,5837.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="2635.2,5812.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
       <Variable x:TypeArguments="x:String" Name="Candidate_Role" />
@@ -143,7 +143,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Sequence Log In and Check" sap:VirtualizedContainerService.HintSize="2572.8,1648.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+    <Sequence DisplayName="Sequence Log In and Check" sap:VirtualizedContainerService.HintSize="2572.8,1624" sap2010:WorkflowViewState.IdRef="Sequence_30">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Current_Username" />
       </Sequence.Variables>
@@ -153,13 +153,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: (2) Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="2510.4,1528" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="5209c7e3-2374-4fa3-9b65-bab181e0febe" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: (2) Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="2510.4,1503.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="5209c7e3-2374-4fa3-9b65-bab181e0febe" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2476.8,1288" sap2010:WorkflowViewState.IdRef="Sequence_31">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2476.8,1263.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="User_Password" />
               </Sequence.Variables>
@@ -168,16 +168,16 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState DisplayName="Check App State If Logged In" sap:VirtualizedContainerService.HintSize="2414.4,1200" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="5209c7e3-2374-4fa3-9b65-bab181e0febe" Version="V3">
+              <uix:NCheckState DisplayName="Check App State If Logged In" sap:VirtualizedContainerService.HintSize="2414.4,1175.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="5209c7e3-2374-4fa3-9b65-bab181e0febe" Version="V3">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1180.8,956.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1180.8,876.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1118.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;You are Logged In&quot;]" />
-                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1118.4,748.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1118.4,668.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
                           <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1076.8,468" sap2010:WorkflowViewState.IdRef="Sequence_35">
@@ -303,7 +303,14 @@
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
-                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1180.8,933.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1180.8,932" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="my_Boolean">
+                        <Variable.Default>
+                          <Literal x:TypeArguments="x:Boolean" />
+                        </Variable.Default>
+                      </Variable>
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -333,10 +340,7 @@
                           </uix:TargetAnchorable>
                         </uix:NTypeInto.Target>
                         <uix:NTypeInto.VerifyOptions>
-                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Current_Username]" Mode="Appears">
-                            <uix:VerifyExecutionTypeIntoOptions.Retry>
-                              <InArgument x:TypeArguments="x:Boolean" />
-                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Current_Username]" Mode="Appears" Retry="[Current_Username = &quot;&quot;]">
                             <uix:VerifyExecutionTypeIntoOptions.Timeout>
                               <InArgument x:TypeArguments="x:Double" />
                             </uix:VerifyExecutionTypeIntoOptions.Timeout>
@@ -360,16 +364,13 @@
                         </uix:NTypeInto.Target>
                         <uix:NTypeInto.VerifyOptions>
                           <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                            <uix:VerifyExecutionTypeIntoOptions.Retry>
-                              <InArgument x:TypeArguments="x:Boolean" />
-                            </uix:VerifyExecutionTypeIntoOptions.Retry>
                             <uix:VerifyExecutionTypeIntoOptions.Timeout>
                               <InArgument x:TypeArguments="x:Double" />
                             </uix:VerifyExecutionTypeIntoOptions.Timeout>
                           </uix:VerifyExecutionTypeIntoOptions>
                         </uix:NTypeInto.VerifyOptions>
                       </uix:NTypeInto>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ACCEDI'" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5209c7e3-2374-4fa3-9b65-bab181e0febe" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ACCEDI'" sap:VirtualizedContainerService.HintSize="387.2,216.8" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5209c7e3-2374-4fa3-9b65-bab181e0febe" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/login.php?_v_=4.2.100.20240329_1445" CVScreenId="197b5d8a-2730-4e0b-8539-a7ba92f33156" CvElementArea="1111, 852, 504, 67" CvTextArea="1329, 877, 67, 16" CvTextArgument="ACCEDI" CvType="Button" DesignTimeRectangle="1115, 855, 500, 63" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='mainFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='tab1' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mainFrame' tag='IFRAME' /&gt;&lt;webctrl parentid='tab1' tag='BUTTON' type='button' class='login-button' aaname='ACCEDI' check:innerText='ACCEDI' /&gt;" Guid="b7b88252-f746-4e7f-908a-5d792cdb02b6" InformativeScreenshot="f7839ce88447ad98ceb0dcfcde220c4e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzJ04cNm7AsXMmBAKkSPkjQpUlYpQZUCDQjgFGBCkQoOeNCQI8CHI@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;B7333792E5BCF4F2559317A17BE4F629&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=B7333792E5BCF4F2559317A17BE4F629&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;6e662030c6b0deab152f3d63295d8d826c9928f63a4ee11b6f233*' title='Webmail Aruba' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" />
                         </uix:NClick.Target>
@@ -388,7 +389,7 @@
                         </uix:NClick.VerifyOptions>
                       </uix:NClick>
                     </Sequence>
-                    <ui:RetryScope DisplayName="Retry Scope Check Log In" sap:VirtualizedContainerService.HintSize="1118.4,668.8" sap2010:WorkflowViewState.IdRef="RetryScope_2">
+                    <ui:RetryScope DisplayName="Retry Scope Check Log In" sap:VirtualizedContainerService.HintSize="1118.4,667.2" sap2010:WorkflowViewState.IdRef="RetryScope_2">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
                           <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1076.8,468" sap2010:WorkflowViewState.IdRef="Sequence_41">
