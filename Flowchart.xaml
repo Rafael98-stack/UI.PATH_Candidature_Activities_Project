@@ -107,9 +107,16 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="1854.4,581.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="758.4,686.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="Candidate_Name" />
       <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
@@ -130,10 +137,7 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID5</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID4" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-      <FlowDecision.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Logged_Or_Not" />
-      </FlowDecision.Condition>
+    <FlowDecision x:Name="__ReferenceID4" Condition="[Logged_Or_Not]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -322,10 +326,7 @@
                 </uix:NCheckState.Target>
               </uix:NCheckState>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID3" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-                  <FlowDecision.Condition>
-                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Wrong_Email_Or_Password" />
-                  </FlowDecision.Condition>
+                <FlowDecision x:Name="__ReferenceID3" Condition="[Wrong_Email_Or_Password]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID1}">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -335,12 +336,6 @@
                       <av:PointCollection x:Key="TrueConnector">470,340 500,340 500,385.4 740.2,385.4 740.2,355.4</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <FlowDecision.True>
-                    <x:Reference>__ReferenceID0</x:Reference>
-                  </FlowDecision.True>
-                  <FlowDecision.False>
-                    <x:Reference>__ReferenceID1</x:Reference>
-                  </FlowDecision.False>
                 </FlowDecision>
               </FlowStep.Next>
             </FlowStep>
@@ -360,25 +355,25 @@
           <av:PointCollection x:Key="ConnectorLocation">930.2,235.4 930.2,265.4 930,265.4 930,310</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Sequence check Logged In" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="Sequence_52">
+      <Sequence DisplayName="Sequence check Logged In" sap:VirtualizedContainerService.HintSize="1203.2,975.2" sap2010:WorkflowViewState.IdRef="Sequence_52">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="449.6,376" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="DebuggerApi" ScopeGuid="1c84a776-6013-4022-a54d-aa57b0d6d3a2" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Webmail Aruba" sap:VirtualizedContainerService.HintSize="1140.8,886.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="DebuggerApi" ScopeGuid="1c84a776-6013-4022-a54d-aa57b0d6d3a2" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_55">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1107.2,646.4" sap2010:WorkflowViewState.IdRef="Sequence_55">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NCheckState DisplayName="Check App State Logged In" sap:VirtualizedContainerService.HintSize="353.6,49.6" sap2010:WorkflowViewState.IdRef="NCheckState_5" Version="V3">
+                <uix:NCheckState DisplayName="Check App State Logged In" sap:VirtualizedContainerService.HintSize="1044.8,558.4" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="1c84a776-6013-4022-a54d-aa57b0d6d3a2" Version="V3">
                   <uix:NCheckState.IfExists>
                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,315.2" sap2010:WorkflowViewState.IdRef="Sequence_53">
                       <sap:WorkflowViewStateService.ViewState>
@@ -416,17 +411,17 @@
                     </Sequence>
                   </uix:NCheckState.IfNotExists>
                   <uix:NCheckState.Target>
-                    <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Inbox" CVScreenId="a2639a6e-c519-4a57-ae63-31b86a93e5b8" CvTextArea="80, 171, 135, 38" CvTextArgument="aroba.it" CvType="Text" DesignTimeRectangle="83, 160, 131, 60" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='logo-cell' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='logo-cell' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' type='' aaname='' /&gt;" Guid="893d7a2b-2d7f-4706-84b0-b61f7abffeda" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIcAAABACAYAAAAwCmQGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAj2SURBVHhe7Zo/i2VFEMX3W/gVBANBDDcwEwQDQUwMBBFkUUw0EFQQEQMFYRNDTQRlP4AgokYbiaGGBobqzO4gggjy7F/PPddze6r7vvdmZpk/VXCY9/pPddWp03XvW71x8+bNTSIRIcWR6OLG0dHRJpGIkOJIdJHiSHSR4kh0keJIdJHiSHSR4kh0keJIdJHiSHSR4kh0keJIdJHiSHRx7cRx76vPNgdvP13B52hN4hjXShwI4o/nHlrg3ufvh2sT10gcdAkJ4s9PXtscvvL4/P3ol5/DPVcJ93/4ZnN4+9bm4NZj9ZLwPVrnuD7iKB0CISAK7N/ffp3FcdUfLwhBuTrWLsW1EQe3phLy7jNVHJhIuurioFso17+//3LumnASrReurTi8c2zTYi8ctn0UlnXK85+f7tbceazyncdLuGfCtRGHXkYhBruU4iiF1nuDYq8FHgklEAfdQ2PhngkpjoJLIY5SZOUQoScQf98gZyzF0eCyi0OPRUBx6QL+q4tuEgkkEgd7NTbqOimOggsvDns0/HXnoxq/bNEFUhz7oRXHtgRdBEQFRiT6rO4R/oOeCUvvHCmOBldNHAiCroHxC4y5fcTBnroPDhoeLpc4SvA1mT3+XeIyiwMoVglChcY0J174W3/VlJz9l00kDgfrnYuzEQdFO+d/SPIXsppI9AI2EM+FEscefKnIdAx1D4zHi+ehPCNIHOzXGP70WALefXYTR0CiF40E3DmoxfKCFR+0SR9feyFshTGfh9KnNS0prXg0rxe6njhqLEGeewE/ja81vnogLgmExwh5IHT35b5Zwzzr6DbqOD1biGw6cyyOkhjBR8QzpmBbSAjtvhFGRGmNbr0SYQ/zXfFM82AkDva3ufCdPTuJZY2vDh/bCoR12kPxycFfRjWnHHcxCc05i8UxJanD1kCgtCq9GEECAtF827pG4wTnZHkcsvbWq7AkSBwtafjRmkgca5hFIn5a7MlXVJARnFPZ7APxBTyoawDGMJ1NHMBr4NyH4tAhgI0QinMO04ESAtChfqPlg3U+x97W8EmwCpK9CpLvwG+Dn+Nr3HdLvOKRHxcHMTIuApnjeyvcXgfxjiC+gPOleIDiXMTQ8e1AoFovzuc8Swy9Diq4OKJ5fPh5J8ThiYrInnGISMA82YOXH134UGAjY/9CIHc+nv1FibWPLwkR81j8ea14mGf9WlxtTG0RvWPsypfnMuxMQjlb6+UDoWmMNdEjUog4hLvee99CHK5MHS7DIWNAh7TG3HzoJA6/zTIIgnBAgfysReBvPFH/sk7GXs0rbm+3HpuK6jcqikfWy4/v8uVt1/lqhcGenj8Z49q/lTgKtF55tOIQqr8iJo9Rcfi5o461EEd0A3HkLVGArDZpP/TgpUfqXyeNeXxrjYN1zC98vPjwPCfTHAWfYy8JKnZilfmjRfsicUQxtV1lIcqJUBedm68V1vjaVhzKRXkgPvkIC13GNM/arfZMWIhDG5zAXjGB32hsUdjXj2+9F9ZFxg3kxnvhdDtbyMeITLV3F7Zu1Ugco/yACupn63Gm77vwJX8yzcnnGpSLOHkg4vDWLPMbUNspjgp6z9lIHH6TVfz21rs/wd83lJTHM++fEMXvJAjyhfl8jWnKD+GpCC42j9/PU8ElRq1xfxp3PjCN7yoO9yMfYfcp52teuXveNcZ2z4RZHGqRq8Vs1rNGtq04qtAafwTJuETohIp8iQOC2v0SmMfjxRJcHLrlI39A55NLXc9LnM3LlB/zJ/xNYvL4MPnYWhzB43Po4yzEMVJkdKgXT4eeShwNhuIIyI/E6p1GcHForBdPu2fRGT58of49TZGw4Z4AyjPqaOcuDj0mVh3Yof7M1djBe88e742S2FMcKk696R6TxaL4sVlM0y8nIIJcyGE7LhAnys85OXjzyfo3EseaP49xWNgAI3FEHd652VscWhwR4RscmtehmMYO3nrqeO+e4ojER0HlA6IFrQMSEqYx3XIQxbptMZ2T9teYi61HuOb9Mu3ESQHrWM8+mR6PF0YcKF3zYUE+eP54777iKNDzFR86g/jkx8GYF97jv//tF/NnXyM/Iamc34jDBTASRyS2Hl+7cuJ+ZHQvvkeP2zMVR3RLTgReHIo4b6uY9kgcJC87DRHE5aQiEsaA30RsUcQSZ0QQxl6NtyT52fK/8Nv8VPe5KD8XulvLCcJiLXHXYg/iEh+7isNjbf07/n/nCIJXuwIEyw0jCQkDONmYxs9CHIC18ukdpGcUUutBvcUdcWCKCXAWOXp+QCYxMa+4PL99+HJOVAOHzhIf5KM5ceFxOXcVZyEOHUqwOpS/frtatIlimju8/erxXyPPifAg1qBCCBSBuBCCwHcvDuCWVR9GUCsuviuuFq0YPX4vkpM+4ou51uRTl6l+LmPqBoCiV5FPfGhc/ubOcV7icCeQ4oYzAmCcwIELwz/Lh8QBZE6uB7GKElsrkBFaMqPb1sZPfsqNzz6PebFEKOfwnT1uEonzpUcT5r6Zw4f+O5Jz70V0znSu1kdrZpyJOAr8edYKpGcc6ORo/+Gn78yfZSJiZ3EIiKTEWFu/tWDIqihjLgrfp7USB/lRQH0fmQvDX15ddOS2jS/4Yr1sFsdU8JZ3zfu55OMCqfuj940JWiNxKAYQrRcW4gB+QwksaoUy5rRWNu81cejW6Pvc7h8Ugtuj7xSjV1Ti9psZFWBfvhRHKw734UVciANwUcrZ9b1mhU/5xi+5KifGo/XCCXEAT7gGVgIG3CDghPmaRev98bvFnO8Jb/c5w8mP4mdM+bGmnR/dzDW+nBdf4+P+czsCYojO3gZtfMKaqEJxADZ66+6hbW9AKo+CGpF8nghjKbFH8TuId6tOV4pH3pEPR3SeOOHStPN17hTCENrYtsmpK44ZtK/iCOcEKkC2gpaQSKyO2/7R3INGJb/E0rZijWtO83t1uC34wm+d73Ey+djr/AHwV/Oe4ljDujgS1xYpjkQXKY5EFymORBcpjkQXKY5EFymORBcpjkQXKY5EFymORBcpjkQXN36/+/UmkYhwo/6PA2lpJ2yz+Q9XZoHA5IH4BQAAAABJRU5ErkJggg==" InformativeScreenshot="5e3a4d664284ea4c0dcab90aad93c326.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAJjhg6aOGzMuUMmBAIZMw.OmSJKvClips0LOW6YuVLmTTw6ZtyBc4Q@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;3A8EC98FF5166762C0DDE91BC6F2B314&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=3A8EC98FF5166762C0DDE91BC6F2B314&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;9ab0caa7b71fbf3d92b5b25a60103ae98bd02dfa22eb3555723f0*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V3" Visibility="Interactive">
+                    <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Inbox" CVScreenId="72ead053-75b5-4c75-b031-ec6f6f85ff7c" CvElementArea="10, 226, 224, 63" CvTextArea="80, 236, 135, 40" CvTextArgument="aroba.tt" CvType="Button" DesignTimeRectangle="64, 225, 169, 61" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='header-left-pane' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='header-left-pane' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;' /&gt;" Guid="27d117fd-903a-4fa7-a28e-798781130877" InformativeScreenshot="bd2795ad5815840fa785d6faf5036d9b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAInTRoxbNCRU0Y@BAI3b7e.e_fBqwc_Hrzp.OWPlw5ePN7.7cuvLzw@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;F88FC6ECA4B757F600FE24E509D59D81&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=F88FC6ECA4B757F600FE24E509D59D81&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;6bd47086cbcc39c8894db2d551ef649788eef28b969b41781b665*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                          <uix:Target CVScreenId="b22e8ba3-8748-4630-936e-38131c20376d" CvElementArea="14, 229, 215, 58" CvType="Button" DesignTimeRectangle="22, 236, 46, 45" FullSelectorArgument="&lt;webctrl parentid='dijit_form_Button_10' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dijit_form_Button_10' tag='SPAN' type='' class='dijitReset dijitInline dijitIcon' aaname='' /&gt;" Guid="e1b92c3f-1fa5-4ea0-acf7-4b5da04d6e79" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAxCAYAAACYq/ofAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACDSURBVGhD7dMxCoAwFARRb+HNvD+W4hUkYrFgEUSRD6PMwqtShIFkWKex/YEhNIbQGEJjCI0hNIbQGFIh25a5e37FkAqZIRSZIRSZIRSZIdUqlzsMeeJ4Knec1zvvyR3+kQqZIRSZIRSZIRSZIRTZ50PeMITGEBpDaAyhMYTmJyFj2wHJFDsODubAFgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target CVScreenId="72ead053-75b5-4c75-b031-ec6f6f85ff7c" CvElementArea="10, 226, 224, 63" CvType="Button" DesignTimeRectangle="9, 225, 55, 61" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' class='header-very-left-pane main-menu-mode-cell toolbar-icon-other' aaname='' /&gt;" Guid="d72e046a-8492-447a-886f-e9ffaca7ec78" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAABBCAYAAABvnNwUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADvSURBVGhD7dUxioRAFEXRXphgMkxv0aXYqdChubGR0Ii6Aqcn+D+q1FdwfQUnflwoqh7fc/5rmgbvnrE/z1+8jO37Hi9jh2HAy9hxHPEydpomvIyd5xkvY5dlwcvYdV3xMnbbNryM3fcdL2OP48BzLJVjqRxL5VgqaWzXdVXEvjS2bdsqYt+xVyldMYXYl8bW5lgqx1JJY0svpULsS2NLf6BC7Dv2KqUrphD70tjaHEvlWCppbOmlVIh9aWzpD1SIfcdepXTFFGJfGlubY6kcS+VYKsdSOZbKsVSOpXIslWOpMvbzfuFl7B3OjWLP8w8X3q94I/4s0QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                         </scg:List>
                       </uix:TargetAnchorable.Anchors>
                     </uix:TargetAnchorable>
                   </uix:NCheckState.Target>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -435,7 +430,7 @@
             </ActivityAction>
           </uix:NApplicationCard.Body>
           <uix:NApplicationCard.TargetApp>
-            <uix:TargetApp Area="-9, -9, 1938, 1158" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAo5JREFUOE+V0L1PE3Ecx/FGNBpZNBET46SDDrI6uDno5q6LLPwDDiYajbOoA4GqkYciGEp5CLYEENBCUaAtlj7y0IejvfbKXbn2rr1er73rA/exSc8wQCS+tsv3+/5e8tOdhF/9foFf+/FU+/x/2W8vz4vrve0JSnoQ8CTuzc1sNmmjf/PqdKcPgGtyyv+8EBhMcLwi+zbI7IotdENbOV49urxLC62CUHgjLHT55H2PyoesYGgO9pWwZByyt2qrR1m7OpoFYnuonGPFGlAWrJ2QvJOgd4Pqln8PXu9erY4vlkoTWnLIE+TOhohkR04sQSGtqrjQBt5jQJqhoYgsKN88ct5RFKObYJLMMy075IukbwbJTGqP4SBJVZXZl8BSJKhoDHz9SJbNoKyUwPJ5sJwoaVmD05885Q+zr9K5Migqo/62h0HsxLDljSDgdMMzNQYul0eQoLDuCakhkoOWNjg88ZYQyReyYhkluaJyGQEBPwXH/CyioR2kyQj2Ulz970Wkc1U4fHFOSxtW3dHXMTpfH5bVfLEGuQrISg0VWYSiKChXVUjyAfh8GUm2hJlF94CWNiw5iXd+Ig0yVQTNyWo6X8HfQzVVRbWmolA6QFqoqKFEDj2D03e19JDBtHRr0RGxBnYzSoyRwDA8MnwBQv2QWKoiJ1XB8Ap+uYjsxjZ9TsuO+jy+/HDJFbd5R/RVwjaF/R13/dULKs3m1XhKwtyy/+PQuPWMtn68x0/0Fw2GiXbL8PiaffgDSJsZhM8F1zYNk+XnfW3tZC86J6/0dPe2jQ4ao067G7M2b/i94etVbXy8PpO5qW/E3GwwWlr6TZbrvcPm2/qBsUedn0xrb/Vfprv7jHf6jZZLjW2d7g8FBvq+3RadygAAAABJRU5ErkJggg==" InformativeScreenshot="c3fef7e1a26c40621d823a4dfd206283.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IdBAIOmjhyyLETJg-BAK6dIHTo1aibYolKNAxTYZJGhVoUAZOjg0iNAo@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;55ACCC1DBA522640729F78A8BB8736F4&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=55ACCC1DBA522640729F78A8BB8736F4&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;651d4dc64f33c7d133f0959fcc945ca67496f1bf85775e10147e59*' title='Messaggi - Aruba Webmail' /&gt;" Title="Messaggi - Aruba Webmail" Url="https://webmail.aruba.it/smart/#webmail/main/Inbox" />
+            <uix:TargetApp Area="-9, -9, 1938, 1158" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAo5JREFUOE+V0L1PE3Ecx/FGNBpZNBET46SDDrI6uDno5q6LLPwDDiYajbOoA4GqkYciGEp5CLYEENBCUaAtlj7y0IejvfbKXbn2rr1er73rA/exSc8wQCS+tsv3+/5e8tOdhF/9foFf+/FU+/x/2W8vz4vrve0JSnoQ8CTuzc1sNmmjf/PqdKcPgGtyyv+8EBhMcLwi+zbI7IotdENbOV49urxLC62CUHgjLHT55H2PyoesYGgO9pWwZByyt2qrR1m7OpoFYnuonGPFGlAWrJ2QvJOgd4Pqln8PXu9erY4vlkoTWnLIE+TOhohkR04sQSGtqrjQBt5jQJqhoYgsKN88ct5RFKObYJLMMy075IukbwbJTGqP4SBJVZXZl8BSJKhoDHz9SJbNoKyUwPJ5sJwoaVmD05885Q+zr9K5Migqo/62h0HsxLDljSDgdMMzNQYul0eQoLDuCakhkoOWNjg88ZYQyReyYhkluaJyGQEBPwXH/CyioR2kyQj2Ulz970Wkc1U4fHFOSxtW3dHXMTpfH5bVfLEGuQrISg0VWYSiKChXVUjyAfh8GUm2hJlF94CWNiw5iXd+Ig0yVQTNyWo6X8HfQzVVRbWmolA6QFqoqKFEDj2D03e19JDBtHRr0RGxBnYzSoyRwDA8MnwBQv2QWKoiJ1XB8Ap+uYjsxjZ9TsuO+jy+/HDJFbd5R/RVwjaF/R13/dULKs3m1XhKwtyy/+PQuPWMtn68x0/0Fw2GiXbL8PiaffgDSJsZhM8F1zYNk+XnfW3tZC86J6/0dPe2jQ4ao067G7M2b/i94etVbXy8PpO5qW/E3GwwWlr6TZbrvcPm2/qBsUedn0xrb/Vfprv7jHf6jZZLjW2d7g8FBvq+3RadygAAAABJRU5ErkJggg==" InformativeScreenshot="31e18dae842a3c634d61fa200740cabd.jpg" Selector="&lt;html app='chrome.exe' title='Webmail Aruba' /&gt;" Title="Messaggi - Aruba Webmail" Url="https://webmail.aruba.it/" />
           </uix:NApplicationCard.TargetApp>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
