@@ -1,0 +1,180 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="StartingProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1105.6,1151.2" sap2010:WorkflowViewState.IdRef="StartingProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Move on right folder " sap:VirtualizedContainerService.HintSize="512,1086.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="449.6,997.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="adf70c97-84fe-4f73-b431-43f9ed2a2b89" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,757.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adf70c97-84fe-4f73-b431-43f9ed2a2b89" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Inbox" DesignTimeRectangle="9, 225, 55, 61" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' class='header-very-left-pane main-menu-mode-cell toolbar-icon-other' aaname='' /&gt;" Guid="7d387e8a-d8e9-482b-83bd-d4276edf26f4" InformativeScreenshot="d0d7cace0390db910420cf408feae14c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIjJ00ZNGzYoXMmBAKuXNFz4tSnZ54NeHBwz4NDDj048EfMiwc2HFo@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;DE6B8958C3908E74A3D14525B3145F65&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=DE6B8958C3908E74A3D14525B3145F65&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;a62593789295e2b01ab37b27885f0f512b86b0d190c9d85e1c52a*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Altro'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adf70c97-84fe-4f73-b431-43f9ed2a2b89" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/CandidatureTestProgetto" CVScreenId="b54c3e4d-854f-41a6-9f32-89cd51cdd948" CvElementArea="11, 675, 220, 61" CvTextArea="61, 695, 155, 18" CvTextArgument="CandidatureTestPr..." CvType="Button" DesignTimeRectangle="64, 696, 157, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='dojoUnique6' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='CandidatureTestProgetto' idx='1' /&gt;" Guid="1900d942-abe1-47b5-affa-30cd77bf3cb4" InformativeScreenshot="b694d13e71b97a4364943a66bca223f9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIjJ00ZNGzYoXMmBAKuXNFz4tSnZ54NeHBwz4NDDj048EfMiwc2HFo@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;DE6B8958C3908E74A3D14525B3145F65&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=DE6B8958C3908E74A3D14525B3145F65&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;a62593789295e2b01ab37b27885f0f512b86b0d190c9d85e1c52a*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '*CandidatureTestProgetto'" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adf70c97-84fe-4f73-b431-43f9ed2a2b89" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Inbox" CVScreenId="5ab1b5e3-9b1a-4748-acce-58394ef12dd3" CvTextArea="211, 536, 147, 16" CvTextArgument="CandidatureTestProgetto" CvType="Text" DesignTimeRectangle="194, 529, 171, 32" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='row-wrapper' parentid='xandmail_widget__TreeNode_7' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='row-wrapper' parentid='xandmail_widget__TreeNode_7' tag='DIV' type='' aaname='' check:innerText='CandidatureTestProgetto' /&gt;" Guid="448604b8-2f52-40fc-899b-0c8a7629fa1d" ImageBase64="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" InformativeScreenshot="f045755154c0039cff8b4add9311f38d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIDJoyYMW7csXMmBAI.PiZ48afMkzNqTLhVZsGeFxpcqfGjYoU1Fky4cA-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;AE32BE7AB979BF3D0550CFAAEAF58FE3&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=AE32BE7AB979BF3D0550CFAAEAF58FE3&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;f1ae5044d58e368edee502e26fdd5f3cfebe5fe121b0d15fd4*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V3">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="5ab1b5e3-9b1a-4748-acce-58394ef12dd3" CvTextArea="197, 301, 166, 15" CvTextArgument="CARTELLE +" CvType="Text" DesignTimeRectangle="188, 288, 188, 42" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;' parentid='uiLogic_mainmenu_SecondaryMenuStackContainer_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;' parentid='uiLogic_mainmenu_SecondaryMenuStackContainer_0' tag='DIV' type='' class='secondary-menu-header dojoDndTarget dojoDndContainer' check:innerText='CARTELLE' /&gt;" Guid="61c0612d-abe4-490f-8439-aac6bcb1f964" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMAAAAAuCAYAAAB+khb1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPXSURBVHhe7dpPSxtBGAZwP8ne8iECQo7BU0tx6WGLBxEaECQtFFtoEEFPoVD0EgoiQmCR4qGwhRIPQgohF9nSwgpCwMOCMIfAfoK3s5P9O5k00iSyZp7DD8zOzJvL++zMpF0plUpUqVTIMAwAbYQ9H0IAQEtJAOI/AHS0EqdBTgjAMkMAQGsIAGgNAQCtIQCgNQQAtIYAgNYQANAaAgBaQwBAawgAaA0BAK0hAKA1BAC0hgDAk3J+fq58/r/mGoDqRo1q29yWSWXFuGGUydwK52ySuTppbFKNKlnxmJJFVblGxuZ6WdQpr2+Kz9ZatnZkzcrNzZv8/cpasBCFDID1uUPefUBBkME86hzX8k380iYvGvdsM1fDMBrU8aUaHLvtUqsWNuQpudJYnkunE2qE/MuG+J7GpS8+u2fZ746cubm5eZO/X1kLFqJwAbB40zDRCIwGPYfstk0Xly75Q968v07Jysw1bS9tnIFD9cxYGoABdXmNsI5zPWrWwO9Qw6hTM3putx1yReDSuXa7yeuN14i19kaBmzkA9y45Uu3mjjwXFqVYAVg9oj4LG86nzp50bFgzpWNOnZwBnzvsU+eK8TWMuofZ8bh5wze5tIY3tLM9be6/nqdmDoAIozwGj6VYATgZNUzA3/TqM3/GYVfsFOxnk4yPHfLjv5M5qubNPMuFCQHQwf7+/pher6d8rlr/EDMFYPfHqJnUDZPX/Jl966e7QStp7Lh5x49ArHckBWxaAPiae5bwvu0mc+ZxB8jW7n+R58EiFWoHeHAAVlvU53eC7Nuz/n0g1qaX4bR5U7x57V2qxnUS0wLA7yPXLrmR7kktmTNzAIY+eZnaF7ljHCxasY5Ax33RMMHNBZmq8Uhy+R2mb04m7g4cvwzXxLxsU5dpNwqIfJEemRYAHIGWVUEvwYw3lJUf2zig5rvwYhxfZPNv5ZAnmpVfcMWvKHLzpuvGaiMA2ipWALj0Z1DeODd96nx1qHvtiZ9BA8bP+J8cGoTjil0i3hnY1QH/rGjenWgt4882smunBWA8bPExKA4Au82Pi6NMFIDgzsuNjdaqj0AhHIMeT+ECEKq+t8m9Cxsvxe5csvkOcCB+8uRn/bb8D19cvIOIy7C6qRvRPSP4Y2eOQtMCMC5+q8cBkIkdIQ6AZLQ2vQTLlLsJPAlzCUCqStbE/wYBUDxzDgDA04IAgNYQANAaAgBaQwBAawgAaA0BAK0hAKA1BAC0hgCA1hAA0BoCAFpDAEBrYwEA0FESgFKpRL/fPqez1y/ozat1Mk0TYCmFva4MwPDDs4RqIcAySANQob+CMY+U88oxSAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAo5JREFUOE+V0L1PE3Ecx/FGNBpZNBET46SDDrI6uDno5q6LLPwDDiYajbOoA4GqkYciGEp5CLYEENBCUaAtlj7y0IejvfbKXbn2rr1er73rA/exSc8wQCS+tsv3+/5e8tOdhF/9foFf+/FU+/x/2W8vz4vrve0JSnoQ8CTuzc1sNmmjf/PqdKcPgGtyyv+8EBhMcLwi+zbI7IotdENbOV49urxLC62CUHgjLHT55H2PyoesYGgO9pWwZByyt2qrR1m7OpoFYnuonGPFGlAWrJ2QvJOgd4Pqln8PXu9erY4vlkoTWnLIE+TOhohkR04sQSGtqrjQBt5jQJqhoYgsKN88ct5RFKObYJLMMy075IukbwbJTGqP4SBJVZXZl8BSJKhoDHz9SJbNoKyUwPJ5sJwoaVmD05885Q+zr9K5Migqo/62h0HsxLDljSDgdMMzNQYul0eQoLDuCakhkoOWNjg88ZYQyReyYhkluaJyGQEBPwXH/CyioR2kyQj2Ulz970Wkc1U4fHFOSxtW3dHXMTpfH5bVfLEGuQrISg0VWYSiKChXVUjyAfh8GUm2hJlF94CWNiw5iXd+Ig0yVQTNyWo6X8HfQzVVRbWmolA6QFqoqKFEDj2D03e19JDBtHRr0RGxBnYzSoyRwDA8MnwBQv2QWKoiJ1XB8Ap+uYjsxjZ9TsuO+jy+/HDJFbd5R/RVwjaF/R13/dULKs3m1XhKwtyy/+PQuPWMtn68x0/0Fw2GiXbL8PiaffgDSJsZhM8F1zYNk+XnfW3tZC86J6/0dPe2jQ4ao067G7M2b/i94etVbXy8PpO5qW/E3GwwWlr6TZbrvcPm2/qBsUedn0xrb/Vfprv7jHf6jZZLjW2d7g8FBvq+3RadygAAAABJRU5ErkJggg==" InformativeScreenshot="f34e886c970cef613199cb7c49344b99.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIDJoyYMW7csXMmBAI.PiZ48afMkzNqTLhVZsGeFxpcqfGjYoU1Fky4cA-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;AE32BE7AB979BF3D0550CFAAEAF58FE3&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=AE32BE7AB979BF3D0550CFAAEAF58FE3&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;f1ae5044d58e368edee502e26fdd5f3cfebe5fe121b0d15fd4*' title='Messaggi - Aruba Webmail' /&gt;" Title="Messaggi - Aruba Webmail" Url="https://webmail.aruba.it/smart/#webmail/main/Inbox" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
