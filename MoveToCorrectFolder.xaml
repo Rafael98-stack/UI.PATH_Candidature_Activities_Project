@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="StartingProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794.4,925.6" sap2010:WorkflowViewState.IdRef="StartingProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="StartingProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,1151.2" sap2010:WorkflowViewState.IdRef="StartingProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -98,33 +98,42 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Move on right folder " sap:VirtualizedContainerService.HintSize="512,860.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Move on right folder " sap:VirtualizedContainerService.HintSize="512,1086.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="449.6,772" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="adf70c97-84fe-4f73-b431-43f9ed2a2b89" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="449.6,997.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="adf70c97-84fe-4f73-b431-43f9ed2a2b89" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,532" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,757.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adf70c97-84fe-4f73-b431-43f9ed2a2b89" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Inbox" DesignTimeRectangle="9, 225, 55, 61" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='uiLogic_application_ApplicationHeader_0' tag='DIV' class='header-very-left-pane main-menu-mode-cell toolbar-icon-other' aaname='' /&gt;" Guid="7d387e8a-d8e9-482b-83bd-d4276edf26f4" InformativeScreenshot="d0d7cace0390db910420cf408feae14c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIjJ00ZNGzYoXMmBAKuXNFz4tSnZ54NeHBwz4NDDj048EfMiwc2HFo@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;DE6B8958C3908E74A3D14525B3145F65&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=DE6B8958C3908E74A3D14525B3145F65&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;a62593789295e2b01ab37b27885f0f512b86b0d190c9d85e1c52a*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Altro'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="adf70c97-84fe-4f73-b431-43f9ed2a2b89" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/CandidatureTestProgetto" DesignTimeRectangle="64, 756, 159, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='dojoUnique8' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dojoUnique8' tag='SPAN' type='' class='itemName' aaname='Cartelle' check:innerText='Cartelle' /&gt;" Guid="0ebcbe76-5d8e-470c-b8c8-83c98df94ade" InformativeScreenshot="011d4048b99b14472c01bb89595c3bfe.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAJTZs2YMGDUsYMmBAKTJiWaMXPo_aN3jJmjaMzdM0fMGZRrxJkLZq4@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;6C8F36114C7CBC958C8732C7312B4BA7&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=6C8F36114C7CBC958C8732C7312B4BA7&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;fc4abf962a84e7580d2d53dc1cff41275648a2a22dad6036606f5*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CVScreenId="c73ba519-069e-4678-a63f-59a399781cb4" CvElementArea="36, 749, 34, 32" CvType="Icon" DesignTimeRectangle="27, 752, 25, 25" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='dojoUnique8' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='dojoUnique8' tag='DIV' type='' class='main-menu-item-icon mainmenu-icon-21-folder' aaname='' /&gt;" Guid="1fb84dbb-a71d-4a08-9c0b-d17686a5cb69" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAClSURBVEhL7ZbhCYAgEEbbzDEcwzEcwzEcwzEc4+KLTqwUpK780T34CCTueRHcLTSBn0pjjJeklCjnvL8hQ5F678k5tz3r8JmkuEiNMd3C1loKIWxd38m57pAU5+gY8rvBpZkh6VPQLeozBylu81a60taPJBHU7Urf+ryoq1KVPkalKhVBpXOkmO6fS3nunWehRHjVYYoUYK1oraESqTlIv2KClGgFkyMJSQVanx0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
+                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/CandidatureTestProgetto" CVScreenId="b54c3e4d-854f-41a6-9f32-89cd51cdd948" CvElementArea="11, 675, 220, 61" CvTextArea="61, 695, 155, 18" CvTextArgument="CandidatureTestPr..." CvType="Button" DesignTimeRectangle="64, 696, 157, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='dojoUnique6' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='CandidatureTestProgetto' idx='1' /&gt;" Guid="1900d942-abe1-47b5-affa-30cd77bf3cb4" InformativeScreenshot="b694d13e71b97a4364943a66bca223f9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIjJ00ZNGzYoXMmBAKuXNFz4tSnZ54NeHBwz4NDDj048EfMiwc2HFo@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;DE6B8958C3908E74A3D14525B3145F65&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=DE6B8958C3908E74A3D14525B3145F65&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;a62593789295e2b01ab37b27885f0f512b86b0d190c9d85e1c52a*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
               </uix:NClick.Target>
               <uix:NClick.VerifyOptions>
                 <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
