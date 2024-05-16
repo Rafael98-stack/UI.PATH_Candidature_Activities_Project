@@ -1,0 +1,357 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="MoveWorkedMails" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1794,875" sap2010:WorkflowViewState.IdRef="MoveWorkedMails_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="MoveWorkedMails" sap:VirtualizedContainerService.HintSize="512,810" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Messaggi - Aruba Webmail" sap:VirtualizedContainerService.HintSize="450,722" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="36bb960e-4e58-4d77-a8d7-a7772e2810c2" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,482" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Principale▸CandidatureT…'" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="36bb960e-4e58-4d77-a8d7-a7772e2810c2" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/CandidatureTestProgetto" CVScreenId="3345aad2-b6d6-44d3-969e-db485b84e523" CvElementArea="211, 247, 18, 18" CvType="CheckBox" DesignTimeRectangle="213, 249, 14, 14" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='uiLogic_util_CustomCheckbox_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='uiLogic_util_CustomCheckbox_0' tag='DIV' type='' class='dijitReset dijitIcon' aaname='' /&gt;" Guid="1de9e07a-5f46-4184-895e-098250f06ea9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABUSURBVDhPY1BVVf1PDUx9g5ycnP7n5OT8LyoqIgqD1IL0YBgEkjA1NYVLEMIgtSA9MD7cIJAtMDaxGFnPqEHY8ahBhDFtDaJaFqFapqUUU8kg1f8AuVL8JKTpGfsAAAAASUVORK5CYII=" InformativeScreenshot="946d0425e8d9727130c8f221fe0f67c4.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIT5k4bMmbMwWMmBAIdeq5p0_NEghEuxKl3IkmPNV7UuNPn6pQXUsSpUg-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;03D8955A08BDB6040E06BC95DCA3D22E&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=03D8955A08BDB6040E06BC95DCA3D22E&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;bc88d092cd655e9b6adcd3ff8e6730fcf73a59bf45d055ac1d*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V3">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="246, 246, 215, 21" FullSelectorArgument="&lt;webctrl class='breadcrumb-path' parentid='uiLogic_webmail_messagelist_ListNavigationPane_0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='breadcrumb-path' parentid='uiLogic_webmail_messagelist_ListNavigationPane_0' tag='SPAN' type='' aaname='' check:innerText='Principale▸CandidatureTestProgetto' /&gt;" Guid="93c8bc7c-1d4e-4a0d-b351-b88d981449d6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANsAAAAZCAYAAAC4o1v/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATWSURBVHhe7Zg9TisxEMffZSKIggCB3h24xuMSFBRRqohwg5RBouAMoaZNJMqUe4GcwM8e2+v58DobSPzQyxQ/kd0Zz4zt+a+X/TUYDIyiKMdHxaYolVCxKUolVGyKUgkVm6JUQsWmKJVQsSlKJZDY3szlqzG/OfMPc4YGEO4+zPXr1ozuMraeDGc2x+wta+vNAerox8KstluzbVmZRdbvu0zMstma5n3Cfpf8uK0OizVeD8Z6kR2zF+OlaY4VuzJCbJf32GFqRvOCGE5JbGHTcWNP3hu78ccQ3OHFBrU2SzPJ2A4FCO8AIiBxYN0bsxxjH//Qq/2QoWvoa1i9SL8udojNcr+xJ9zGDPG9n8Y3xPb4+GhGo1HWhsk30rFOlr5xT1VsdebDqSs293u+MZfutHPN/Qc1eWj4y9k2vYKSE4u+psY8+GTzvz/8aQp+TORQS7QZc/0w9fe52OA6+pVFOBwOzWQygb85u6f/wkKjWF8PapKXFZyCK2QnIsGvS431a0XEBNXp5+J43xi/PXUhdxzjmkWKNDW4t63WYQxp+hAj0/w0RroHDUpyRxurNYwj/u5eD7G5vI2tF+qLOUr1FteQ7WGcD1nDT/OJam/7Ysca7fcaGZq99cFNHhs8+oZr7+vj5MQhxIbiw3X7P6OrDwkHPwRwHXwe2K+Di4sL8/T0ZM7Pz7P2rg0XuA1BDUWaL2xWu6lwHWOy5ie+2FbyCw3YNjv1pU9lFsfCxUaFwR42kFe+PguxMT9sz9Ua45M42bWnr5HgT+qh9XoBR3uPNexYJ2rjD+BSTs9+H0h44wqxITHgphe2hBAbzlcYd/bgTtCM2FyN5KOOF3orvg5ubm5AcDlbb7ERQtPGpuENimOK+HiT0e+iX7wXoQ1ZaiIHFxuJ6Won4vM+qdE8XGzumsSB+v0a+GbMr6kUmxMTg+XB1/JhgITQY63JvNDci2Ir5Qz3dr9GYr4qtsLpIsQWT0bAxYgxwykbHgLX87zYvAiTX+sfT9UObm9vu8WWWbgspDEa09iNa5ugJDaxUbhRUTMU/WIcmj/aviM2L4wYN4F9aIyUQ45LjU7jpvskjhCHhOblc3Wg/RNriOfr/Wi9Du9fElsxZ7hXR2zCluh9svHc+Jr7kZNtN1dXV+b5+bn7NdLCNzR3n/uQ65LYejxt4XdfP2HjzcB9ca3SBrWTRsqTmz+JUwDGhhwkzhfEJgWFGr/HGnY9VEtiK+YM9+qIjf/PhmxCbCgGER/kjrZ4ymXExucBtu55uS+R0+l0xwcSC2xSpgnRxuGGif69xBY2mTYYbQD8u+RH86V6+ZOX1Boaw4/F+byvaJyQlzflrqaHGsI19wVbuCY2sk55RF5WL84r5rfHOlEbF1Mpp6eS2NI1f60TYpttkB/KRV4jbZ77Qu4gMJ4rx3g8hg8kOZskNGULXczYhGCzm7LAm1MUmwPH9l8tsYhS83f5WVtoHMA2n2xaPwZqwLXae0tXK/jmxMb9M3aLbPrYdHGcPFGSDa1NnIdbO7FOklxeWi8bj23rpZgvxGvH8j1L96JfO7aU04LE9u/BwlOUOnjR81P6GKjYlBPDvRmgUwdO0fLJeShUbMrJQV9t65xqjh8lNkX5n1GxKUolVGyKUgkVm6JUQsWmKFUYmL/EZAXyvOocxAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="36bb960e-4e58-4d77-a8d7-a7772e2810c2" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/CandidatureTestProgetto" CVScreenId="6e2ee074-b386-4c00-bc2d-38871bcb132b" CvElementArea="1749, 189, 44, 38" CvType="Button" DesignTimeRectangle="1761, 199, 19, 19" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='uiLogic_util_dropdownbutton_FolderTreeDropDownButton_0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='uiLogic_util_dropdownbutton_FolderTreeDropDownButton_0' tag='SPAN' type='' class='dijitReset dijitInline dijitIcon iconMove' aaname='' /&gt;" Guid="aa161df4-995d-4ac8-9d2f-2cbf3e3cdb01" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADaSURBVEhLtZRNDkRAEIX7ku0vTuIidtxBgpUFl7DHPWryJNXGqEmomVp86W5evnptwWVZRlbYy9M0pa7raNu2E8MwUJ7n+3uG83fOQb6u60UO+r6nuq5vUxRFGOJ4iiTWMM/z0Zw30zT9hXEcz/IkSagsS6qqar/aLys88AU5kK6ohZ0OU4AU0sJOe3kcx2JIC3xBDqSQFnY6TLFoDuzlURSJIS3wBTmQQlrY6TDFojkIn+XbX/Epy7Icct60bSuGn4CCTdNc5RY47z1ZsTd/f8Dnz1Xz3rC5pxfPIQdmv56fKQAAAABJRU5ErkJggg==" InformativeScreenshot="b497b02db3fdab0b5c4f1e1634650fab.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIT5k4bMmbMwWMmBAIdeq5p0_NEghEuxKl3IkmPNV7UuNPn6pQXUsSpUg-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;03D8955A08BDB6040E06BC95DCA3D22E&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=03D8955A08BDB6040E06BC95DCA3D22E&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;bc88d092cd655e9b6adcd3ff8e6730fcf73a59bf45d055ac1d*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, Image" Version="V3">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="6e2ee074-b386-4c00-bc2d-38871bcb132b" CvElementArea="1704, 189, 45, 38" CvType="Button" DesignTimeRectangle="1707, 192, 40, 33" ElementType="Button" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='7' parentid='uiLogic_util_ComponentToolbar_1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='dijit dijitReset dijitInline icon-button dijitDropDownButton' parentid='uiLogic_util_ComponentToolbar_1' tag='SPAN' aaname='' check:text='▼' /&gt;" Guid="da65ea4a-69db-45b4-937e-a032a39c0eff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAlCAYAAAA5iwvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALWSURBVFhH3ZjLavJAFMe/l/GN6l1Ll2oX4g0VofgCuhHaVXFhF24rInijRUUXbkpFhYrW23uc8g9MSOIxnaBW/RY/htEzM785OZmE/LPZbHRNXL+w2+2mx8dHqtVq1Gg0zgLWhgNcjH464VQqRS8vL0p7e3tLHo+HvF7vn7d+v1/nonVUhbEbBEAUgy4BuMBJm2lVGJcAu8EuLwk4wW1HGHWDS4GdIfBSWmQZbjvCKHYEXCJw+z+EUdwCBFrt393dUbPZpM1mQ9vtdoevry9Kp9N7x+/rmwojUGClD9ler6cTHI1G1Ol0dORyOXa8WV8qw1bAjQEZITqdTimbzVKhUKBisbjD8/Ozcvdzc3EcVRiy7+/vquxkMqF4PE6DwUD9jQPZ5+bj2CvscrmUANkWR49WdjweUzQapX6/r5PjWC6X0uscJcM+n49arZYqgMxGIhHqdrs6McFsNqNgMEiVSkXpQ5ibl8M0wzKIG0HIfH5+Ujgc1tWxkfV6Tfl8nobDodIXGZbhIGHI1ut1VQS1eH9/rysNGY4i7HQ6lQCztlqtqot+fHxQKBSidrutk5EBwjLroT0owzj8sSBkUZN4UBhlZJjP5+z8HKYZ/g0cWajZQCCgKw2rlMtldn6Og4QB3uqenp5YERleX1+VzHFzc+wVdjgcukCzfiKRoO/vb1bIDBxrQlZ2vYMzLMDjdbFYsGIceK/FucrNZYZphq2STCaVO54T1IJ6R2a5OX5DShg70/aNaP/PZDKm0ngiGmWtzH/UDAv2SUMWZcCNkeUkwgDSq9VKlX17eztYFuwVttvtB/Pw8KBkGk8/yHIxVjEVxo60rcD4+1/+f9IMnwJWWJyR3IBzAif2uwS+rsRiMbq5ubko4MR++cFOSqWS0iIQuzt3i7NbOO0IAzxqEYBdIRgDzwHWhgNc4KR11AkD7AaXAHWDYj8HWBsO2swKdoQvnSsTttEPl/sXKgKTCqcAAAAASUVORK5CYII=" SearchSteps="Selector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Account principale'" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="36bb960e-4e58-4d77-a8d7-a7772e2810c2" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/CandidatureTestProgetto" CVScreenId="217aec9b-7368-489a-98bb-435b568f7886" CvTextArea="1611, 452, 125, 13" CvTextArgument="CheckedCandidature" CvType="Text" DesignTimeRectangle="1611, 452, 125, 13" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='row-wrapper' parentid='xandmail_widget__TreeNode_19' tag='DIV' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl class='row-wrapper' parentid='xandmail_widget__TreeNode_19' tag='DIV' type='' aaname='' check:innerText='CheckedCandidature' /&gt;" Guid="840c2a1d-3981-4cbf-ba4e-f088ce0ad0fa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL0AAAAeCAYAAAB5Xx9wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANTSURBVHhe7Zw7bipBEEW9M1bBctgCu0BiASSkRCREBCQEJAQEBKxgrIN00aXU83l+HtujruBouruqq7qr7gBO/DGbzZokqYmP+XzeJElNpOiT6kjRJ9WRok+qI0WfVEeKPqmOFH1SHSn6pDpGFf1yuWxut1vzeDyeMGZN9tPp9MT3/A+LxaK5XC7Nfr8v2ofSFoez6i6w2Wze7N8FecnPObpq5H4le1JmNNGvVqvmfr+/CYexC38qotfcBab7jSF8F/N3iJ6zUneeJXttjCb6UrOimLoa+hVi/K8S4yDs+C0FQ0X3rwyNO9QvRf/OKKLXz5q+T0EEfz6fn43j5wKfnN4YxqwNtZXE6j9Dhsa7Xq9PFGfoy6l8QvuJTT24q2weT+dmnTOoJqx77i4/7Pgpvu7nPzFZ2263bzXSPuXgSVx8FdtjQF9f/zqjiF5NdlGVoMBqjuax0CowT+ast9nW6/Wroe6PT1c8iSm+LMyjrQ3i8KLoLh6fNe4pYWmusxA73ltz9mhflx+xNMbX95EPX57Y8fP7uC9PnZt59PdY2j81fl30KjZ4U2MTVXzWXVDa6z6IL9q74sXzysZ5fKxYQ8BfZ4jxJVhyl+J7HVSjPj+tgXxVW89fiuN98LH2Uk+vJXbfPzV+/eeNF9ibyFhfpw7r7ufx1FA+RcnvjemKV3qJvLHxnCWUW3H9xesSfalWjHU/5e7zIzb3JrfurzN7fp3Ta+P38zGQQ3dy3Gdq/OgfsnE9+tAINdEbKrvARhNdpOANjULrihd9ozDa8vl69PF5jM8ac3xiLvA6qEZD/WTzuecvxXFfH2tv/KSfOqOJnmLxiePFpcmsqfmxwN5EFwY2xWNesjGPf6QNjSch6Czx7LIrFmuKJx/i6G7yx46fzsfT9+osxJBvzOU16vPTWOf3+3h+99VZ5MtTY1Ae3VP+mk+R0UQPKpC+EtUw2WOBKaSawVzN034vdLS5eNsa1BXPz8rT4wjOqr0g0YJys06O3W73jENO0Bhf5fL9Hpux6hBr1Obnd2PtcDi8bH42crov5zgej68cMR/EPkb71BhV9EnyF0nRJ9WRok+qI0WfVEeKPqmOFH1SHSn6pDpS9El1pOiT6kjRJ9WR/8A1qYxZ8wk3mFgWIbSI6gAAAABJRU5ErkJggg==" InformativeScreenshot="86450fc781039ebcd45578c0ba8ed665.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIT5k4bMmbMwWMmBAIdeq5p0_NEghEuxKl3IkmPNV7UuNPn6pQXUsSpUg-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;03D8955A08BDB6040E06BC95DCA3D22E&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=03D8955A08BDB6040E06BC95DCA3D22E&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;bc88d092cd655e9b6adcd3ff8e6730fcf73a59bf45d055ac1d*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V3">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="217aec9b-7368-489a-98bb-435b568f7886" CvTextArea="1602, 235, 129, 16" CvTextArgument="Account principale" CvType="Text" DesignTimeRectangle="1602, 235, 129, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl class='tooltip-dialog-section-label' parentid='uiLogic_webmail_FolderTreeTooltipDialog_1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='tooltip-dialog-section-label' parentid='uiLogic_webmail_FolderTreeTooltipDialog_1' tag='DIV' type='' aaname='Account principale' check:innerText='Account principale' /&gt;" Guid="8a80bae2-5e7a-492c-9d4e-c03f05cfd18f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAhCAYAAACV+ESuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM+SURBVHhe7ZjdlcIgEEbtxL+tweObVdjW2ohWkS0h20LerSAbIEOYYQiy8qDme7jnmEBgGOaGHFdfX1+9xn6/B2CxaE4YvDDaQwAABxPG3DidTgCABCTNigzSOgEAHOQJhAHgASAMAAUwYXa7ndoJAOAwjlhhzA8IA8A85IkVZrvdqp0AAA7jCIQB4EG8MOYHhAFgHvLECrPZbNRO/+Hy0/X3+93S3vQ+74BZR/dzUdv+z7VvbW7a/qq2l3P9rZvr2uN9CsYRK8zxeOwPh4PaqZxL33Qu4Zbfq9Ln9SHp6wvz+kAYHeOIcWVlzKl2wtzaUZR29k0ankL3e9c332G7kK5r+kvwbNQu5og3fHyr0zjfTd+N183Y10By8NhcPz5/MOYwdxP2D14QXrohF3Y+u05xwmRikWM5eL74evNxxfnj82nC0D1HvdPxnSBPrDDr9VrtVEqYbC3xhqggLVQE8WZafNEm2oMiiudNCBPhxigTJmZevIQwEdN65vMl15uPixc/kc6f2l/NyWdjHKksjCgGf9qEbzfqExeE3VB6JhJk7B+1BwU1zvO4MBTDJCE9w2KyY0imwvTziNh8XKy4RI6ysWTyNVynhEnF5eKYSAnCxlPy7cdfCPWFiQQRxWEIPkG0zcsVaiyDgW/qw8LMFEEuDq2QpmJ369XHEDnJxZLJlyFX4DIueo7mIWjtbDwvdEw6N59JdWEo0Ro+uU8Kw4rJ388II+fMFWlwnRWGFeELCTMTl8zP7DXNr8G+HD6fusLMJdbgN5w2dNogdjLR72DD2QYqnxdUYPKTjArVt9MzVYVR1jGOq49RKEwuX8M1L/hcXGL+6BMwMV4Q31KpKowvyuitQxsUf4Nz4m94ht+wRHt2/AEao0AYR/i2JqbClEhRnxMmtZ5pvSlhJC6OdLsuzHTNmeZfChWFid9SIZTwsHBkEfDnpBSyYMva29tYJAXC8MKaE+aBv5WfFCa8R4RtujAzfyv7U3zAzEsxqCcWn4MI25ZC1RNmeYjCfxleNa73B8I8BYRZGhDmKSDM0oAwABQAYQAoAMIAUACEAaAACANAARAGgAIiYc7nMwAgAU4YAAqAMAAU4ITZ9H8dXTIOTFKHzwAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sposta x'" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="36bb960e-4e58-4d77-a8d7-a7772e2810c2" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/CandidatureTestProgetto" CVScreenId="fd292436-461d-4252-9876-c39af780ca13" CvElementArea="1028, 645, 84, 36" CvTextArea="1045, 656, 55, 13" CvTextArgument="SPOSTA" CvType="Button" DesignTimeRectangle="1028, 647, 85, 33" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span' parentid='uiLogic_util__DialogContent_0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='uiLogic_util__DialogContent_0' tag='SPAN' class='dijitReset dijitInline dijitButtonNode' aaname='' check:innerText='SPOSTA' /&gt;" Guid="2dcbddf1-1af1-4863-a64b-55524fb4b3ef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFkAAAAlCAYAAAAp60UVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR9SURBVGhD7ZrLj1RFFIf9ZwZo5wUzTs/TaWaGngfTPQORSFAURcQEkDfDmEA00QQ2xpUbFxhNXBgTY2JMMMFodGfUqDGasFDxCfHxLxT1lZw71ber6XOLxsVQJF/u5dSpqq7fOXWqJrn3VSoVk7i7JJH/B5pEPv9Q1Xx2eNHcOLts/n0uoQW90A398po2iPz6vvngAIlioKOvayYyEQh18OFfeq49b4ef0ZnIpHrIOREHejaJrKnBmgjeC2h0QM8mkUOOiTsjSmRNBO8FtDpEiZwoRpTI2giud7Q6RImcKEaUyNoIwh8rdfPF4Xnz7bML7t23/3iy1sCNs0sNfX1+O1N3YzAW7yEfCM3HuPm5fK6drpl/bvUX359P1cxfq61/D2h1iBJZw9+ry+bNPRUz0L3JdHV1Obo3bTCv7Bw31+1C3rBtYvfbz20fNj/ZBco4V48vmkPTg6a0cUPmx/vBrYPm+2PbVfNdfmpbZgtxZOaBLCCvPTyZ2d/eO5WNfydEiayJ4KfPzLoFj/SWzLmFYQfvF5ZGXYaIyHODPeal+qg5b8Wd6L/f2Vbmyi4QZOOO4T5no+/qfNnBO7aZgW6Xte3m+9L6XFwec+yfHHB9x/pK5oXFEWcjOGTw73aHEDzagXds+bUJGh0gSmQNIuKLtdHMxkKkJEi7n0WfHKya/tJGM7Wl2wnzvBUBn91j/ebqibW/RH89XTdHbT/aJCDt5hPEj+BRFvw2mR9xCQaB+PzQXINPDFEiayL41iNb3WIetNnJwqhxfntIZLKSbKbP5f0zpmqzHJ/3n5hp6At+QL4+stB2PqGVyNRkdhRtlAnxe3nHeFav82h0gCiRNZB5ZCA/FPJ1VBaB7Qdrw07JwPboxGbz0dNVU+4pOdG+ulUSfLDRhv+VA9W28wmtRKb2L5X7XAmiTMn42GjzxyhKlMjaCP5itzX1rl7uzRYvdU4Wm4c6+qE9qCSrQequj4iAmB/bgLSbT/q1EpnsxX5mtuxKDLuLXcb4HzzZvJNAq0OUyEVhu105sM3VOMlMWawcfBxA7z4+7YSij2QWPqFTnoUjACXlu6ON2RqaT9pCIoug2EOcrA65ui9jFCVKZE0Ev7FbjgVJFrEF2YoiiizWr8k+CMX1Cx/6+QcQY+8a+a80yG2l3XzSNyQyYxMQrny1oV7XBrxjywdK0OgAUSK34/rKkjk1O+QWw7WKjJRrFzcG/wrXSmS4Zg8vP8OqAz0O+f/eiS2uFmvmkzHzIhNMDjdsUirEl+wli2nj/iz2okSJrIkgBw4LJxP4kTxZMNcv2jUiw59WwEu7J11W4g/U6Vd3TTTU2nbzCXmRuYXsGd/s/N/bN93gC+88NuXKEj75G4tGB4gSuQhkCmLwDLUXIXTvzdPJ+TpFlMjaCK53tDpEiZwoRpTI2giud7Q6RImcKEaUyNoIrne0OkSJnChGk8jpuws9Gh2C312kL4g6S/ALovQtXPHn7Qh+Cwfpq87O0PKrToEIkOqaGp1YA73Qzc9goUnkROdJIt91KuYmrPoi53w/2gYAAAAASUVORK5CYII=" InformativeScreenshot="2c8503059e2c7658d049dc5de645cce5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIT5k4bMmbMwWMmBAIdeq5p0_NEghEuxKl3IkmPNV7UuNPn6pQXUsSpUg-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;03D8955A08BDB6040E06BC95DCA3D22E&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=03D8955A08BDB6040E06BC95DCA3D22E&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;bc88d092cd655e9b6adcd3ff8e6730fcf73a59bf45d055ac1d*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="fd292436-461d-4252-9876-c39af780ca13" CvElementArea="1174, 479, 31, 31" CvTextArea="730, 483, 73, 26" CvTextArgument="Sposta" CvType="CloseButton" DesignTimeRectangle="700, 461, 535, 70" FullSelectorArgument="&lt;webctrl parentid='uiLogic_util_OkCancelDialog_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='uiLogic_util_OkCancelDialog_0' tag='DIV' type='' class='dijitDialogTitleBar' aaname=' &amp;#x9; &amp;#x9; &amp;#x9;' check:innerText='Sposta' /&gt;" Guid="5abb164f-09b2-40a6-bfe8-9f1fa9a55553" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,133" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Click 'Scrivi'" sap:VirtualizedContainerService.HintSize="388,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+Progetto" DesignTimeRectangle="74, 271, 141, 45" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Scrivi' parentid='dijit_form_Button_10' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dijit_form_Button_10' tag='SPAN' type='' class='dijitReset dijitInline dijitButtonText' /&gt;" Guid="bf5aa33a-d0a7-4e26-8ab4-bce7b088210d" ImageBase64="" InformativeScreenshot="9cc5f9b044c348806e0084c9e8a240a0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAJzxgyYMWzYqQNGBAIdeq5p0_NEghEuxKl3IkmPNV7UuNPn6pQXUsSpUg-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;9EFE84CBAD99AC5EA2E2DAA38D6BDB1C&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=9EFE84CBAD99AC5EA2E2DAA38D6BDB1C&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;8b636fd6b4d0a7e9464874843435046372a206ea945b586581*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector" Version="V3">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="22, 271, 200, 45" ElementType="Button" FullSelectorArgument="&lt;webctrl id='dijit_form_Button_10' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dijit_form_Button_10' tag='SPAN' type='' class='dijitReset dijitStretch dijitButtonContents' aaname='' check:innerText='SCRIVI' /&gt;" Guid="aef73d1f-954d-4e48-b408-60e8bfac8b9f" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Da Iacopo'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Text="[dt_CandidateData.Rows(CurrentAssign)(&quot;Sender&quot;).ToString()]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+Progetto" DesignTimeRectangle="1086, 491, 732, 28" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='AliasToVisible' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='AliasToVisible' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="fcbaa322-3adc-433c-a573-4726066afac9" ImageBase64="" InformativeScreenshot="cf6fb8b4708275ebab8873c4c0450861.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAJzxgyYMWzYqQNGBAIdeq5p0_NEghEuxKl3IkmPNV7UuNPn6pQXUsSpUg-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;9EFE84CBAD99AC5EA2E2DAA38D6BDB1C&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=9EFE84CBAD99AC5EA2E2DAA38D6BDB1C&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;8b636fd6b4d0a7e9464874843435046372a206ea945b586581*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector" Version="V3">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="07b7c01d-1054-40df-a1b2-f0e694b4409d" CvTextArea="1045, 410, 154, 15" CvTextArgument="NUOVO MESSAGGIO" CvType="Text" DesignTimeRectangle="1038, 399, 714, 40" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='uiLogic_webmail_FloatingCompose_21' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='uiLogic_webmail_FloatingCompose_21' tag='SPAN' type='' class='dijitTitleNode' aaname='Nuovo messaggio' check:innerText='NUOVO MESSAGGIO' /&gt;" Guid="c68610b9-577d-4572-a3a0-dadb24ac68bc" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Da Iacopo'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Text="[&quot;CONFERMA REGISTRAZIONE CANDIDATURA: &quot; + dt_CandidateData.Rows(CurrentAssign)(&quot;Name&quot;).ToString() + &quot; &quot; +dt_CandidateData.Rows(CurrentAssign)(&quot;Surname&quot;).ToString()]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" DesignTimeRectangle="1123, 526, 619, 36" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='Subject' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Subject' tag='INPUT' type='text' class='' aaname='Oggetto' /&gt;" Guid="8bfb0568-ac08-4e51-8128-58d461692a68" InformativeScreenshot="bc34b09c57b3549e34374c452b90bb85.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzRk4YNmzAyYMmBAJy5aKVL0_QCUK0C5a9VLQt0oRLFopXvGnqpSk@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=A4981B7DD168824EA1A0CD1FA418A4D7&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;3a925d974c31dc9a47e307c856a979ebe94c9f747bdac15828526*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="ec85cf37-43d2-4304-b58d-bd9cd2d43ee9" CvTextArea="1045, 410, 154, 15" CvTextArgument="NUOVO MESSAGGIO" CvType="Text" DesignTimeRectangle="1038, 399, 714, 40" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='uiLogic_webmail_FloatingCompose_21' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='uiLogic_webmail_FloatingCompose_21' tag='SPAN' type='' class='dijitTitleNode' aaname='Nuovo messaggio' check:innerText='NUOVO MESSAGGIO' /&gt;" Guid="868613a9-1826-4f9b-a1dd-a77403caf7a1" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="1" DisplayName="Type Into 'Nuovo messaggio'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Text="[&quot;Buongiorno/Buonasera, è stata registrata a sistema la candidatura dell'utente: &quot; +dt_CandidateData.Rows(CurrentAssign)(&quot;Name&quot;).ToString() + &quot; &quot; + dt_CandidateData.Rows(CurrentAssign)(&quot;Surname&quot;).ToString()]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" CVScreenId="8dd55933-c8df-4e3f-a155-d631c5e0b073" CvTextArea="1046, 586, 827, 22" CvTextArgument="Buongiorno/Buonasera, e stata registrata a sistema la candidatura dell'utente: FELE BAFELE" CvType="Text" DesignTimeRectangle="1029, 578, 875, 464" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='xandmail_widget_LeggeraEditor_2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='xandmail_widget_LeggeraEditor_2' tag='DIV' type='' class='box edition dijitEditor' aaname='' /&gt;" Guid="c54bb76f-29e3-40f9-be76-3c038bafe920" InformativeScreenshot="06c18dc1578490fd20b2c9a41b50bda9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzJ04cNm7AsXMmBAKkSPkjQpUlYpQZUCDQjgFGBCkQoOeNCQI8CHI@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;B7333792E5BCF4F2559317A17BE4F629&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=B7333792E5BCF4F2559317A17BE4F629&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;6e662030c6b0deab152f3d63295d8d826c9928f63a4ee11b6f233*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0.5" DisplayName="Click 'Invia'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" CVScreenId="23c0c4fb-dad5-4aed-97ef-e1e99741812b" CvElementArea="1035, 1095, 142, 47" CvTextArea="1066, 1107, 55, 20" CvTextArgument="INVIA" CvType="Button" DesignTimeRectangle="1039, 1098, 106, 42" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9; &amp;#x9;' parentid='uiLogic_webmail_FloatingCompose_23' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9; &amp;#x9;' parentid='uiLogic_webmail_FloatingCompose_23' tag='SPAN' type='' class='dijitReset dijitInline dijitButtonNode dijitLabelButtonNode' check:innerText='INVIA' /&gt;" Guid="ff62a7e9-0c7f-42cd-9b60-5e93131526c7" ImageBase64="" InformativeScreenshot="916813d6936e6129815b3737fe6841c5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzJ04cNm7AsXMmBAKkSPkjQpUlYpQZUCDQjgFGBCkQoOeNCQI8CHI@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;B7333792E5BCF4F2559317A17BE4F629&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=B7333792E5BCF4F2559317A17BE4F629&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;6e662030c6b0deab152f3d63295d8d826c9928f63a4ee11b6f233*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1145, 1098, 30, 42" ElementType="Button" FullSelectorArgument="&lt;webctrl id='uiLogic_util_FineComboButton_23' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uiLogic_util_FineComboButton_23' tag='SPAN' type='' class='dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton' aaname=' &amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9; &amp;#x9;' check:text='?' /&gt;" Guid="dfaa96e4-014a-4877-be8a-e4dbd4f03508" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Messaggio inviato'" sap:VirtualizedContainerService.HintSize="387.2,216.8" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a18a1ac0-8ac1-4748-b556-1be901a871a8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/Candidature+Test+progetto" CVScreenId="b3274dca-8907-4f4f-9d75-ab13714f0d76" CvElementArea="1189, 1065, 27, 26" CvType="CloseButton" DesignTimeRectangle="1193, 1068, 20, 20" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl parentid='dijit_form_Button_63' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dijit_form_Button_63' tag='SPAN' type='' class='dijitReset dijitInline dijitIcon closeIcon' aaname='' /&gt;" Guid="e6ad5934-afdd-4cd2-899e-4bae3a239f75" InformativeScreenshot="35a9e302493e512a1171e4739b21fc60.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIzJ04cNm7AsXMmBAKkSPkjQpUlYpQZUCDQjgFGBCkQoOeNCQI8CHI@&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;B7333792E5BCF4F2559317A17BE4F629&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=B7333792E5BCF4F2559317A17BE4F629&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;6e662030c6b0deab152f3d63295d8d826c9928f63a4ee11b6f233*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="b3274dca-8907-4f4f-9d75-ab13714f0d76" CvTextArea="804, 1081, 343, 21" CvTextArgument="Messaggio inviato e salvato in posta inviata." CvType="Text" DesignTimeRectangle="807, 1061, 372, 62" ElementType="Text" FullSelectorArgument="&lt;webctrl class='text' parentid='uiLogic_util_display_FeedbackMessage_0' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='text' parentid='uiLogic_util_display_FeedbackMessage_0' tag='DIV' type='' aaname='Messaggio inviato e salvato in posta inviata.' check:innerText='Messaggio inviato e salvato in posta inviata.' /&gt;" Guid="51cb8adb-3ac5-4cdd-89c0-c1d13a1165f1" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                  </Sequence>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Le conferme sono state correttamente inviate&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAo5JREFUOE+V0L1PE3Ecx/FGNBpZNBET46SDDrI6uDno5q6LLPwDDiYajbOoA4GqkYciGEp5CLYEENBCUaAtlj7y0IejvfbKXbn2rr1er73rA/exSc8wQCS+tsv3+/5e8tOdhF/9foFf+/FU+/x/2W8vz4vrve0JSnoQ8CTuzc1sNmmjf/PqdKcPgGtyyv+8EBhMcLwi+zbI7IotdENbOV49urxLC62CUHgjLHT55H2PyoesYGgO9pWwZByyt2qrR1m7OpoFYnuonGPFGlAWrJ2QvJOgd4Pqln8PXu9erY4vlkoTWnLIE+TOhohkR04sQSGtqrjQBt5jQJqhoYgsKN88ct5RFKObYJLMMy075IukbwbJTGqP4SBJVZXZl8BSJKhoDHz9SJbNoKyUwPJ5sJwoaVmD05885Q+zr9K5Migqo/62h0HsxLDljSDgdMMzNQYul0eQoLDuCakhkoOWNjg88ZYQyReyYhkluaJyGQEBPwXH/CyioR2kyQj2Ulz970Wkc1U4fHFOSxtW3dHXMTpfH5bVfLEGuQrISg0VWYSiKChXVUjyAfh8GUm2hJlF94CWNiw5iXd+Ig0yVQTNyWo6X8HfQzVVRbWmolA6QFqoqKFEDj2D03e19JDBtHRr0RGxBnYzSoyRwDA8MnwBQv2QWKoiJ1XB8Ap+uYjsxjZ9TsuO+jy+/HDJFbd5R/RVwjaF/R13/dULKs3m1XhKwtyy/+PQuPWMtn68x0/0Fw2GiXbL8PiaffgDSJsZhM8F1zYNk+XnfW3tZC86J6/0dPe2jQ4ao067G7M2b/i94etVbXy8PpO5qW/E3GwwWlr6TZbrvcPm2/qBsUedn0xrb/Vfprv7jHf6jZZLjW2d7g8FBvq+3RadygAAAABJRU5ErkJggg==" InformativeScreenshot="55c966d4ff9b001533a7a5dd759168e6.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIGTpswZtSBU0Y@BAInDka4cKTKnytaLHjUZceSDyo8aXCgZIktJix48Q-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;FA081CBA1CD5F88070E54D6E071D75E2&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=FA081CBA1CD5F88070E54D6E071D75E2&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;666f96b12957e8e347cccd736bf92d9729183756c5aa98c143*' title='Messaggi - Aruba Webmail' /&gt;" Title="Messaggi - Aruba Webmail" Url="https://webmail.aruba.it/smart/#webmail/main/CandidatureTestProgetto" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
