@@ -125,7 +125,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="1854,690" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="1854,787" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="Candidate_Name" />
       <Variable x:TypeArguments="x:String" Name="Candidate_Surname" />
@@ -145,9 +145,9 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID9</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID9">
+    <FlowStep x:Name="__ReferenceID11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">875,135</av:Point>
@@ -255,7 +255,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">1110,415 1110,445 1109.5,445 1109.5,470</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState DisplayName="Check App State 'Non ci'" sap:VirtualizedContainerService.HintSize="1046,706" sap2010:WorkflowViewState.IdRef="NCheckState_9" Version="V3">
+                  <uix:NCheckState DisplayName="Check App State 'Non ci'" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="NCheckState_9" Version="V3">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,489" sap2010:WorkflowViewState.IdRef="Sequence_67">
                         <sap:WorkflowViewStateService.ViewState>
@@ -297,7 +297,7 @@
                     <uix:NCheckState.Target>
                       <uix:TargetAnchorable BrowserURL="https://webmail.aruba.it/smart/#webmail/main/CandidatureTestProgetto" CVScreenId="d95d4616-5fb7-414b-9900-29cb7c7a9cba" CvTextArea="227, 326, 294, 16" CvTextArgument="Non ci sono messaggi da visualizzare." CvType="Text" DesignTimeRectangle="198, 275, 1730, 122" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl class='notify' parentid='messagesList' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='notify' parentid='messagesList' tag='DIV' type='' aaname='Non ci sono messaggi da visualizzare.' check:innerText='Non ci sono messaggi da visualizzare.' /&gt;" Guid="b764b81d-ad03-4de3-a0c0-358323be4dc5" ImageBase64="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" InformativeScreenshot="9fc0fc3d5e1a7ca8f7c4c6405b00ed34.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='{&amp;quot;sessionid&amp;quot;:&amp;quot;IeBAIDJk2bMWbkqZMmBALmjUG2bJy6f_rZK3bIXbdyzqk7Z2yYFGnspSt27Q-&amp;quot;,&amp;quot;sessionHID&amp;quot;:&amp;quot;F5C4B7105A5A38C4C42C000A8117CBF9&amp;quot;,&amp;quot;sessionIdComponent&amp;quot;:&amp;quot;_HID_=F5C4B7105A5A38C4C42C000A8117CBF9&amp;quot;,&amp;quot;anti_csrf_token&amp;quot;:&amp;quot;5a87bcc462585a90f7ed5f54fd4d2be9aee579179466551a2b*' title='Messaggi - Aruba Webmail' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="d95d4616-5fb7-414b-9900-29cb7c7a9cba" CvTextArea="245, 249, 58, 16" CvTextArgument="Principale" CvType="Text" DesignTimeRectangle="246, 247, 57, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl class='breadcrumb-label' parentid='uiLogic_webmail_messagelist_ListNavigationPane_0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='breadcrumb-label' parentid='uiLogic_webmail_messagelist_ListNavigationPane_0' tag='SPAN' type='' aaname='Principale' check:innerText='Principale' /&gt;" Guid="a2b568e6-c3e0-40aa-9935-a2308f994f69" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAAYCAYAAABJA/VsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFySURBVFhH7ZXNjcJADIW3mQghpCiX7YE2SBOUgJQSUgAHGkkTaYIKvPPn5I09yiZIhNXOHJ7EYDPPn+2Er6qqKDcV6FxUoHNR7tAPqu9E31L9QAf4QaTzQM39SadzIrZSx854dI9kbLU21qGg6xYTbnTqF4r6n9BG7WgmPtIRv/treiu0/dyPVNvpW5MLmAXjunvOj0Y0wfjxYR+ctP88+O1yeaLZrhaOETXXm/9eQrsz5+lmbFvvYDrloBkbcW44+1x/T6pIBQ33u/P0TrH1AQAOA+uQHJgXtO1FJi9Q0FAUmqvYLAWNfgu/O1ztRiWgbY3Ry9c3fGqC0e/rjXoVOtFtloLmTXGyd/CdYevCMJo+De2bMedN+bxlRvtAq9is1ZOW3niWedGktfaBls80xBQ03BE1wXlzjKeegJYcLhZz7QQ9n+W6KejO/DtMeeAVrbfxaRe8A6j0YgH054UNeKcK9KeVJfReKtC5qEDnoYp+AGC8XggOpuY4AAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image, CV" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -326,13 +326,12 @@
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">1235,465</av:Point>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">1290,535 1290,575</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetDatas - Invoke Workflow File (GetDatas.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="GetDatas.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Candidates">
-                                <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="out_dt_Candidates" />
-                              </OutArgument>
+                              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Candidates">[out_dt_Candidates]</OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -340,6 +339,49 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:InvokeWorkflowFile>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">1235,575</av:Point>
+                                  <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">1290,645 1290,685</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreateExcelDoc - Invoke Workflow File (CreateExcelDoc.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="CreateExcelDoc.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_Candidates">
+                                    <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="out_dt_Candidates" />
+                                  </InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InvokeWorkflowFile>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">1235,685</av:Point>
+                                      <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MailConfirmSender - Invoke Workflow File (MailConfirmSender.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="MailConfirmSender.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_Candidates">[out_dt_Candidates]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:InvokeWorkflowFile>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
                         </FlowStep>
                       </FlowDecision.True>
                       <FlowDecision.False>
@@ -474,5 +516,7 @@
     <x:Reference>__ReferenceID6</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
   </Flowchart>
 </Activity>
